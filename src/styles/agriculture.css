@@ -1,0 +1,154 @@
+.section .simulation-note {
+  color: #93a4c7;
+  font-size: 0.9rem;
+}
+
+.agriculture-water {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.agriculture-water > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 10px 12px;
+  border: 1px solid #26365e;
+  background: #07111f;
+  border-radius: 10px;
+}
+
+.agriculture-water dt {
+  color: #c7d2ef;
+  font-size: 0.85rem;
+}
+
+.agriculture-water dd {
+  margin: 0;
+  font-weight: 800;
+  color: #39ffb6;
+}
+
+.section .agriculture-method-note,
+.section .agriculture-status {
+  font-size: 0.8rem;
+  color: #93a4c7;
+}
+
+.section .agriculture-stale {
+  color: #ffd166;
+}
+
+.risk.unavailable {
+  background: #344466;
+  color: #f5f7ff;
+}
+
+.dashboard-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.weekly-alert {
+  margin: 16px 0;
+  padding: 14px;
+  border-left: 4px solid #ffd166;
+  background: #07111f;
+  border-radius: 10px;
+}
+
+.weekly-alert p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+
+.analysis-criteria {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #26365e;
+  font-size: 0.85rem;
+  color: #c7d2ef;
+}
+
+.analysis-criteria summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #00d4ff;
+}
+
+.risk {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.risk.high {
+  background: #ff4d6d;
+  color: #fff;
+}
+
+.risk.medium {
+  background: #ffd166;
+  color: #1a1a1a;
+}
+
+.risk.low {
+  background: #3ddc97;
+  color: #06140e;
+}
+
+.agriculture-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.agriculture-metrics > div {
+  background: #07111f;
+  border: 1px solid #26365e;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.agriculture-metrics span {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #00d4ff;
+}
+
+.agriculture-metrics small {
+  color: #93a4c7;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.solution-panel {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-left: 4px solid #3ddc97;
+}
+
+.solution-panel h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 360px) {
+  .agriculture-metrics {
+    grid-template-columns: 1fr;
+  }
+}

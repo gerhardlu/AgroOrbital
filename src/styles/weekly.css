@@ -1,0 +1,256 @@
+.weekly-forecast {
+  width: 100%;
+  min-width: 0;
+  max-width: 1120px;
+  margin: 26px 0;
+  padding: 24px;
+  border: 1px solid #263b53;
+  border-radius: 20px;
+  background: linear-gradient(140deg, rgba(10, 30, 45, 0.96), rgba(8, 13, 32, 0.96));
+}
+
+.weekly-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.weekly-heading > div,
+.weekly-content,
+.weekly-day {
+  min-width: 0;
+}
+
+.weekly-heading .tag {
+  margin: 0 0 8px;
+}
+
+.weekly-heading h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  overflow-wrap: anywhere;
+}
+
+.weekly-partial {
+  padding: 5px 10px;
+  border: 1px solid #726443;
+  border-radius: 99px;
+  color: #ffe1a2;
+  background: rgba(255, 207, 111, 0.07);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.weekly-forecast .weekly-status,
+.weekly-forecast .weekly-stale,
+.weekly-forecast .weekly-empty {
+  margin: 14px 0;
+  font-size: 0.9rem;
+}
+
+.weekly-forecast .weekly-error,
+.weekly-forecast .weekly-stale {
+  color: #ffe1a2;
+}
+
+.weekly-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.weekly-summary > div {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #284451;
+  border-radius: 13px;
+  background: rgba(57, 255, 182, 0.035);
+}
+
+.weekly-summary dt {
+  color: #c7d2ef;
+  font-size: 0.85rem;
+}
+
+.weekly-summary dd {
+  margin: 3px 0 0;
+  color: #65e8c4;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.weekly-summary .weekly-summary-detail {
+  margin-top: 4px;
+  color: #afc1d9;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.weekly-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.weekly-day {
+  padding: 12px;
+  border: 1px solid #25384f;
+  border-radius: 12px;
+  background: rgba(5, 12, 27, 0.5);
+  overflow-wrap: anywhere;
+}
+
+.weekly-day h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.weekly-weekday,
+.weekly-date {
+  display: block;
+}
+
+.weekly-weekday {
+  color: #70e5ff;
+  text-transform: capitalize;
+}
+
+.weekly-date {
+  color: #f5f7ff;
+}
+
+.weekly-forecast .weekly-condition {
+  min-height: 3.2em;
+  margin: 10px 0 12px;
+  color: #c7d2ef;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.weekly-day-metrics {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.weekly-day-metrics dt {
+  color: #aebed7;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.weekly-day-metrics dd {
+  margin: 3px 0 0;
+  color: #f5f7ff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.weekly-temperatures dd {
+  display: grid;
+  gap: 2px;
+}
+
+.weekly-temperatures small {
+  color: #aebed7;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.weekly-soil {
+  padding-top: 10px;
+  border-top: 1px solid #25384f;
+}
+
+.weekly-soil dt span {
+  display: block;
+}
+
+.weekly-soil > dd:first-of-type {
+  color: #65e8c4;
+}
+
+.weekly-soil .weekly-soil-note,
+.weekly-soil .weekly-coverage {
+  color: #aebed7;
+  font-size: 0.68rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.weekly-soil .weekly-coverage {
+  color: #ffe1a2;
+}
+
+.weekly-forecast .weekly-source {
+  margin: 18px 0 0;
+  color: #aebed7;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.weekly-source a {
+  color: #70e5ff;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 1039px) {
+  .weekly-days {
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .weekly-forecast {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .weekly-summary {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .weekly-summary > div {
+    padding: 12px 14px;
+  }
+
+  .weekly-summary dd {
+    font-size: 1.6rem;
+  }
+
+  .weekly-days {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .weekly-days {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-day {
+    padding: 16px;
+  }
+
+  .weekly-forecast .weekly-condition {
+    min-height: 0;
+  }
+
+  .weekly-day-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .weekly-soil {
+    grid-column: 1 / -1;
+  }
+}
